@@ -49,11 +49,8 @@ return (
       <div className="text4">
         <h2>Navegue pelos Desafios das Inundações</h2>
       </div>
-      <div className="text5">
-        <h4>As inundações são obstáculos complexos, mas a SafeFlood simplifica a resposta a esses eventos.</h4>
-      </div>
       <div className="text6">
-        <h4>Explore como nossos recursos vão além do convencional, capacitando você a entender, se preparar e agir diante das inundações.</h4>
+        <h4>As inundações são obstáculos complexos, mas a SafeFlood simplifica a resposta a esses eventos.Explore como nossos recursos vão além do convencional, capacitando você a entender, se preparar e agir diante das inundações.</h4>
       </div>
     </section>
 

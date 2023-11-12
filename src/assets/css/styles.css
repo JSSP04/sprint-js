@@ -102,6 +102,15 @@ html body .menu .x2 {
   background-color: transparent;
   grid-area: x2;
 }
+@media (max-width: 576px) {
+  html body .menu {
+    min-height: 100vh;
+    width: 95%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box1 box1" "box1 box1" "text1 text1";
+  }
+}
 html body .desafios {
   padding: 2rem 6rem;
   min-height: 150vh;
@@ -142,7 +151,24 @@ html body .desafios .box6 {
   grid-template-columns: 40% 30% 30%;
   grid-template-rows: 50% 50%;
   gap: 5px;
-  grid-template-areas: "text4 text5 text5 " "text4 text6 text6 ";
+  grid-template-areas: "text4 text6 text6 " "text4 text6 text6 ";
+}
+@media (max-width: 576px) {
+  html body .desafios .box6 {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-areas: "text4 text4 text4 " "text6 text6 text6 " "text6 text6 text6 ";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1025px) {
+  html body .desafios .box6 {
+    min-height: 50vh;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "text4 text4 text4 " "text6 text6 text6 ";
+  }
 }
 html body .desafios .box6 .text4 {
   grid-area: text4;
@@ -155,17 +181,6 @@ html body .desafios .box6 .text4 {
 html body .desafios .box6 .text4 h2 {
   font-weight: bolder;
   font-size: 3rem;
-}
-html body .desafios .box6 .text5 {
-  grid-area: text5;
-  color: var(--branca);
-  display: flex;
-  text-align: end;
-  align-items: center;
-  justify-items: center;
-}
-html body .desafios .box6 .text5 h4 {
-  font-size: 1.5rem;
 }
 html body .desafios .box6 .text6 {
   grid-area: text6;
@@ -186,15 +201,31 @@ html body .desafios .x2 {
   background-color: transparent;
   grid-area: x2;
 }
+@media (max-width: 576px) {
+  html body .desafios {
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "box3" "box4" "box5" "box6" "box6";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  html body .desafios {
+    min-height: 30vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box3 box4 box5" "box6 box6 box6";
+  }
+}
 html body .seguranca {
   padding: 6rem;
-  max-height: 140vh;
-  width: 95%;
+  max-height: 150vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: 30% 30% 40%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
-  grid-template-areas: "box7 box7 x1" "box7 box7 text7" "box7 box7 x2";
+  grid-template-areas: "box7 x1" "box7 text7" "box7 x2";
 }
 html body .seguranca .box7 {
   grid-area: box7;
@@ -212,7 +243,6 @@ html body .seguranca .text7 {
   color: var(--branca);
   text-align: center;
   padding: 4rem;
-  gap: 50px;
 }
 html body .seguranca .text7 .part h2 {
   font-weight: bolder;
@@ -224,10 +254,25 @@ html body .seguranca .text7 .part h3 {
   font-size: 1.75rem;
   text-align: end;
 }
+@media (max-width: 576px) {
+  html body .seguranca {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box7" "text7";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  html body .seguranca {
+    max-height: 90vh;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box7 text7" "box7 text7";
+  }
+}
 html body .confianca {
   padding: 6rem;
   min-height: 100vh;
-  width: 95%;
+  width: 100%;
   display: grid;
   gap: 20px;
   color: var(--branca);
@@ -280,6 +325,22 @@ html body .confianca .x1 {
 html body .confianca .x2 {
   background-color: transparent;
   grid-area: x2;
+}
+@media (max-width: 576px) {
+  html body .confianca {
+    min-height: 50vh;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box8" "box9" "box9";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  html body .confianca {
+    min-height: 80vh;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas: "box9 box9" "box8 box8";
+  }
 }
 html body .cadastro {
   padding: 6rem 2rem 0;
@@ -342,6 +403,22 @@ html body .cadastro .modal-content {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--branca);
+}
+@media (max-width: 576px) {
+  html body .cadastro {
+    min-height: 80vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 40% 40%;
+    grid-template-areas: "text2" "text3" "box2" "button1";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  html body .cadastro {
+    min-height: 70vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 40% 40%;
+    grid-template-areas: "text2" "text3" "box2" "button1";
+  }
 }
 html body footer {
   padding: 6rem;

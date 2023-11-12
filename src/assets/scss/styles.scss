@@ -124,6 +124,20 @@ html {
               background-color: transparent;
               grid-area: x2;
             }
+
+            @media(max-width:576px) {
+                min-height: 100vh;
+                width: 95%;
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: 
+                    "box1 box1"
+                    "box1 box1"
+                    "text1 text1"
+                
+                ;
+
+            }
             
         }
 
@@ -176,10 +190,36 @@ html {
                 grid-template-rows: 50% 50%;
                 gap: 5px;
                 grid-template-areas: 
-                    "text4 text5 text5 "
+                    "text4 text6 text6 "
                     "text4 text6 text6 "
                 
                 ;
+
+                @media(max-width:576px) {
+
+                    display: grid;
+                    grid-template-columns: 40% 30% 30%;
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 5px;
+                    grid-template-areas: 
+                        "text4 text4 text4 "
+                        "text6 text6 text6 "
+                        "text6 text6 text6 "
+                    
+                    ;
+                }
+                
+                @media screen and (min-width: 576px) and (max-width: 1025px) {
+                    min-height: 50vh;
+                    grid-template-columns: 40% 30% 30%;
+                    grid-template-rows: 50% 50%;
+                    grid-template-areas: 
+                        "text4 text4 text4 "
+                        "text6 text6 text6 "
+                    
+                    ;
+                
+                }
     
                 
                 .text4{
@@ -193,18 +233,6 @@ html {
                     h2{
                         font-weight: bolder;
                         font-size: 3rem;   
-                    }
-                }
-                .text5{
-                    grid-area: text5;
-                    color: var(--branca);
-                    display: flex;
-                    text-align: end;
-                    align-items: center;
-                    justify-items: center;
-                    
-                    h4{
-                        font-size: 1.5rem; 
                     }
                 }
                 .text6{
@@ -232,22 +260,51 @@ html {
                 background-color: transparent;
                 grid-area: x2;
             }
+
+            @media(max-width:576px) {
+                min-height: 100vh;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-areas: 
+                    "box3"
+                    "box4"
+                    "box5"
+                    "box6"
+                    "box6"
+                
+                ; 
+
+    
+            }
+            
+            @media screen and (min-width: 576px) and (max-width: 1024px) {
+                min-height: 30vh;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                    "box3 box4 box5"
+                    "box6 box6 box6"
+                
+                ; 
+            
+            }
         }
         
         .seguranca{
             padding: 6rem;
-            max-height: 140vh;
-            width: 95%;
+            max-height: 150vh;
+            width: 100%;
             display: grid;
-            grid-template-columns: 30% 30% 40%;
+            grid-template-columns: 50% 50%;
             grid-template-rows: repeat(3, 1fr);
             gap: 20px;
             grid-template-areas: 
-                "box7 box7 x1"
-                "box7 box7 text7"
-                "box7 box7 x2"
+                "box7 x1"
+                "box7 text7"
+                "box7 x2"
             
             ;
+            
 
             .box7{
                 grid-area: box7;
@@ -265,7 +322,6 @@ html {
                 color: var(--branca);
                 text-align: center;
                 padding: 4rem;
-                gap: 50px;
 
                 .part{
 
@@ -283,12 +339,35 @@ html {
                 }
 
             }
+
+            @media(max-width:576px) {
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                    "box7"
+                    "text7"
+                ;
+
+            }
+            
+            @media screen and (min-width: 576px) and (max-width: 1024px) {
+                max-height: 90vh;
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                    "box7 text7"
+                    "box7 text7"
+                ;
+            
+            
+            }
+            
         }
 
         .confianca{
             padding: 6rem;
             min-height: 100vh;
-            width: 95%;
+            width: 100%;
             display: grid;
             gap: 20px;
             color: var(--branca);
@@ -356,6 +435,31 @@ html {
                 background-color: transparent;
                 grid-area: x2;
             }
+
+            @media(max-width:576px) {
+                min-height: 50vh;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: 
+                    "box8"
+                    "box9"
+                    "box9"
+                
+                ;
+
+            }
+            
+            @media screen and (min-width: 576px) and (max-width: 1024px) {
+                min-height: 80vh;
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(2, 50%);
+                grid-template-areas: 
+                    "box9 box9"
+                    "box8 box8"
+                
+                ;
+            
+            }
         }
     
        .cadastro{
@@ -421,7 +525,7 @@ html {
         .x1{
             background-color: transparent;
             grid-area: x1;
-          }
+        }
           
         .x2{
             background-color: transparent;
@@ -436,12 +540,38 @@ html {
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
             color: var(--branca);
-          }
+        }
+
+        @media(max-width:576px) {
+            min-height: 80vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 10% 40% 40%;
+            grid-template-areas: 
+                "text2"
+                "text3"
+                "box2"
+                "button1"
+            ;
+
+        }
+          
+        @media screen and (min-width: 576px) and (max-width: 1024px) {
+            min-height: 70vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 10% 40% 40%;
+            grid-template-areas: 
+                "text2"
+                "text3"
+                "box2"
+                "button1"
+            ;
+          
+        }
 
 
-       }
+        }
 
-       footer {
+        footer {
         padding: 6rem;
         background: rgba( 17, 17, 17, 0.7 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
