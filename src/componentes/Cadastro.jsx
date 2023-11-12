@@ -4,64 +4,64 @@ import '../assets/css/styles.css';
 
 const Cadastro = () => {
 return (
-<body class="bg1">
+<body className="bg1">
 
 {/* cadastro */}
-<div id="Cadastro" class="cadastro">HTML
-    <div class="bgt">
+<div id="Cadastro" className="cadastro">HTML
+    <div className="bgt">
         
     </div>
-    <div class="text2"><h2>Cadastre-se para baixar o nosso APP!</h2></div>
-    <div class="text3"><h3>Disponível nas plataformas IOS e Android</h3></div>
-    <div class="box2"></div>
-    <div class="button1">
+    <div className="text2"><h2>Cadastre-se para baixar o nosso APP!</h2></div>
+    <div className="text3"><h3>Disponível nas plataformas IOS e Android</h3></div>
+    <div className="box2"></div>
+    <div className="button1">
 
         {/* Button trigger modal */}
-        <div class="d-grid gap-2 col-6 mx-auto p-5">
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <div className="d-grid gap-2 col-6 mx-auto p-5">
+            <button type="button" className="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Cadastre-se
             </button>
         </div>
 
         {/* Modal */}
-        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header" data-bs-theme="dark">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastro para o APP Safe Flood</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered modal-lg">
+                <div className="modal-content">
+                    <div className="modal-header" data-bs-theme="dark">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Cadastro para o APP Safe Flood</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form class="row mb-4 p-3 justify-content-md-evenly bg-7">
+                    <div className="modal-body">
+                        <form className="row mb-4 p-3 justify-content-md-evenly bg-7">
 
-                            <div class="col-md-5 my-2">
-                                <label for="nome" class="form-label">Nome</label>
-                                <inputHTML type="text" class="form-control" id="nome" name="nome" placeholder="Ex: João da Silva" required/>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="nome" className="form-label">Nome</label>
+                                <inputHTML type="text" className="form-control" id="nome" name="nome" placeholder="Ex: João da Silva" required/>
                             </div>
                             
-                            <div class="col-md-5 my-2">
-                                <label for="email" class="form-label">Email</label>
-                                <inputHTML type="email" class="form-control" id="email" name="email" placeholder="Ex: email@gmail.com" required/>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="email" className="form-label">Email</label>
+                                <inputHTML type="email" className="form-control" id="email" name="email" placeholder="Ex: email@gmail.com" required/>
                             </div>
               
-                            <div class="col-md-5 my-2">
-                                <label for="telefone" class="form-label">Telefone</label>
-                                <inputHTML type="tel" class="form-control" id="telefone" name="telefone" placeholder="Ex: 99999-9999" required/>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="telefone" className="form-label">Telefone</label>
+                                <inputHTML type="tel" className="form-control" id="telefone" name="telefone" placeholder="Ex: 99999-9999" required/>
                             </div>
               
-                            <div class="col-md-5 my-2">
-                                <label for="cep" class="form-label">CEP</label>
-                                <inputHTML type="text" class="form-control" id="cep" name="cep" placeholder="Ex: 11111-111" required/>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="cep" className="form-label">CEP</label>
+                                <inputHTML type="text" className="form-control" id="cep" name="cep" placeholder="Ex: 11111-111" required/>
                             </div>
               
-                            <div class="col-md-5 my-2">
-                                <label for="cidade" class="form-label">Cidade</label>
-                                <inputHTML type="text" class="form-control" id="Cidade" name="cidade" placeholder="Ex: São Paulo" required/>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="cidade" className="form-label">Cidade</label>
+                                <inputHTML type="text" className="form-control" id="Cidade" name="cidade" placeholder="Ex: São Paulo" required/>
                             </div>
               
-                            <div class="col-md-5 my-2">
-                                <label for="estado" class="form-label">Estado</label>
-                                <select class="form-select" id="estado" name="estado" required>
+                            <div className="col-md-5 my-2">
+                                <label htmlFor="estado" className="form-label">Estado</label>
+                                <select className="form-select" id="estado" name="estado" required>
                                   <option value="" selected disabled>Selecione o estado</option>
                                   <option value="SP">São Paulo</option>
                                   <option value="RJ">Rio de Janeiro</option>
@@ -71,10 +71,10 @@ return (
                 
                           </form>
                     </div>
-                    <div class="modal-footer ">
-                        <div class="mx-auto">
-                            <button type="button" class="btn btn-danger btn-lg" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="Enviar()">Enviar</button>
+                    <div className="modal-footer ">
+                        <div className="mx-auto">
+                            <button type="button" className="btn btn-danger btn-lg" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" className="btn btn-success btn-lg" onClick="Enviar()">Enviar</button>
                         </div>
 
                     </div>

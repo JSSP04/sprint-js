@@ -1,11 +1,13 @@
 import {} from 'react';
-import './header.css';
+import '../assets/scss/styles.scss';
+import '../assets/css/styles.css';
 
 const Header = () => {
-  return (
+return (
 
 <body class="bg1">
-    Navegação
+
+    {/* Navegação */}
     <nav class="navbar navbar-expand-md navbar-dark p-4 header border-bottom border-light" id="Navbar">
         <div class="container-fluid">
             <a class="navbar-brand font-bold" href="#Menu">
@@ -37,7 +39,7 @@ const Header = () => {
     </nav>
 </body>
 
-  )
+);
 }
 
 export default Header;
