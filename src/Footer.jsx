@@ -4,10 +4,8 @@ import '../assets/css/styles.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <p>&copy; {new Date().getFullYear()} Safe Flood. Todos os direitos reservados.</p>
-      </div>
+    <footer>
+        <p>© 2023 Safe Flood. Todos os direitos reservados.</p>
     </footer>
   );
 }
