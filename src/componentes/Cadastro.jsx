@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './cadastro.css';
-import Img4 from '../../assets/img/Safe Flood.png';
+import '../assets/scss/styles.scss';
+import '../assets/css/styles.css';
 
 const Cadastro = () => {
   const [formData, setFormData] = useState({
