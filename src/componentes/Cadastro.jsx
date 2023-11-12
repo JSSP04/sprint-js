@@ -2,181 +2,90 @@ import { useState } from 'react';
 import '../assets/scss/styles.scss';
 import '../assets/css/styles.css';
 
-const Cadastro = () => {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    cep: '',
-    cidade: '',
-    estado: '',
-  });
+const Body = () => {
+return (
+<body class="bg1">
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+{/* cadastro */}
+<div id="Cadastro" class="cadastro">HTML
+    <div class="bgt">
+        
+    </div>
+    <div class="text2"><h2>Cadastre-se para baixar o nosso APP!</h2></div>
+    <div class="text3"><h3>Disponível nas plataformas IOS e Android</h3></div>
+    <div class="box2"></div>
+    <div class="button1">
 
-  const validateCEP = (cep) => {
-    if (cep.length !== 9) {
-      return false; // O CEP deve ter exatamente 9 caracteres (incluindo o hífen)
-    }
-  
-    const parteNumerica = cep.substring(0, 5) + cep.substring(6, 9); // Remover o hífen
-    for (let i = 0; i < parteNumerica.length; i++) {
-      if (isNaN(parseInt(parteNumerica[i]))) {
-        return false; // Se qualquer caractere não for um número, ele é inválido
-      }
-    }
-  
-    return true;
-  };
-  
+        {/* Button trigger modal */}
+        <div class="d-grid gap-2 col-6 mx-auto p-5">
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Cadastre-se
+            </button>
+        </div>
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (!validateCEP(formData.cep)) {
-      alert('CEP inválido. Use o formato 11111-111.');
-      return;
-    }
-  
-    localStorage.setItem('formData', JSON.stringify(formData));
-  
-    setFormData({
-      nome: '',
-      email: '',
-      telefone: '',
-      cep: '',
-      cidade: '',
-      estado: '',
-    });
-  
-    alert('Cadastro realizado com sucesso!');
-  };
+        {/* Modal */}
+        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" data-bs-theme="dark">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastro para o APP Safe Flood</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row mb-4 p-3 justify-content-md-evenly bg-7">
 
-  return (
-    <body className="container-fluid bg-1">
-      <main className="container-fluid">
-        <section className="row d-flex align-items-center p-4 vh-100">
-          <div id="form" className="row text-center p-4 d-flex align-items-center mx-auto justify-content-center">
-            <h2>Cadastre-se por aqui e use o nosso app!</h2>
-            <h3>Disponível nas plataformas IOS e Android</h3>
-            <figure className="col-md-8 mx-auto d-flex justify-content-center">
-              <img src={Img4} alt="ícone do app" className="img-fluid img2 rounded" />
-            </figure>
+                            <div class="col-md-5 my-2">
+                                <label for="nome" class="form-label">Nome</label>
+                                <inputHTML type="text" class="form-control" id="nome" name="nome" placeholder="Ex: João da Silva" required/>
+                            </div>
+                            
+                            <div class="col-md-5 my-2">
+                                <label for="email" class="form-label">Email</label>
+                                <inputHTML type="email" class="form-control" id="email" name="email" placeholder="Ex: email@gmail.com" required/>
+                            </div>
+              
+                            <div class="col-md-5 my-2">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <inputHTML type="tel" class="form-control" id="telefone" name="telefone" placeholder="Ex: 99999-9999" required/>
+                            </div>
+              
+                            <div class="col-md-5 my-2">
+                                <label for="cep" class="form-label">CEP</label>
+                                <inputHTML type="text" class="form-control" id="cep" name="cep" placeholder="Ex: 11111-111" required/>
+                            </div>
+              
+                            <div class="col-md-5 my-2">
+                                <label for="cidade" class="form-label">Cidade</label>
+                                <inputHTML type="text" class="form-control" id="Cidade" name="cidade" placeholder="Ex: São Paulo" required/>
+                            </div>
+              
+                            <div class="col-md-5 my-2">
+                                <label for="estado" class="form-label">Estado</label>
+                                <select class="form-select" id="estado" name="estado" required>
+                                  <option value="" selected disabled>Selecione o estado</option>
+                                  <option value="SP">São Paulo</option>
+                                  <option value="RJ">Rio de Janeiro</option>
+                                  <option value="DF">Distrito Federal</option>
+                                </select>
+                              </div>
+                
+                          </form>
+                    </div>
+                    <div class="modal-footer ">
+                        <div class="mx-auto">
+                            <button type="button" class="btn btn-danger btn-lg" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="Enviar()">Enviar</button>
+                        </div>
 
-            <form className="row mb-4 p-3 justify-content-md-evenly bg-7" onSubmit={handleSubmit}>
-              <div className="col-md-5 my-2">
-                <label htmlFor="nome" className="form-label">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="nome"
-                  name="nome"
-                  placeholder="Ex: João da Silva"
-                  required
-                  value={formData.nome}
-                  onChange={handleInputChange}
-                />
-              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-              <div className="col-md-5 my-2">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Ex: email@gmail.com"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="col-md-5 my-2">
-                <label htmlFor="telefone" className="form-label">
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  className="form-control"
-                  id="telefone"
-                  name="telefone"
-                  placeholder="Ex: 99999-9999"
-                  required
-                  value={formData.telefone}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              {/* Add similar input fields for other form fields */}
-
-              <div className="col-md-5 my-2">
-                <label htmlFor="cep" className="form-label">
-                  CEP
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="cep"
-                  name="cep"
-                  placeholder="Ex: 11111-111"
-                  required
-                  value={formData.cep}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="col-md-5 my-2">
-                <label htmlFor="cidade" className="form-label">
-                  Cidade
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="Cidade"
-                  name="cidade"
-                  placeholder="Ex: São Paulo"
-                  required
-                  value={formData.cidade}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="col-md-5 my-2">
-                <label htmlFor="estado" className="form-label">
-                  Estado
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="estado"
-                  name="estado"
-                  placeholder="Ex: São Paulo"
-                  required
-                  value={formData.estado}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <button type="submit" className="btn btn-outline-dark col-md-4">
-                Criar conta
-              </button>
-            </form>
-          </div>
-        </section>
-      </main>
-    </body>
-  );
-};
+</div> 
+</body>
+);
+}
 
 export default Cadastro;
