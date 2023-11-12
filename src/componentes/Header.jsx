@@ -2,7 +2,7 @@ import {} from 'react';
 import '../assets/scss/styles.scss';
 import '../assets/css/styles.css';
 
-const Header = () => {
+function Header () {
 return (
 
 <body className="bg1">

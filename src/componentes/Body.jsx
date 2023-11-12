@@ -2,7 +2,7 @@ import '../assets/scss/styles.scss';
 import '../assets/css/styles.css';
 
 
-const Body = () => {
+function Body () {
 return (
 <body className="bg1">
 
