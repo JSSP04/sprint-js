@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { } from 'react';
 import '../assets/scss/styles.scss';
 import '../assets/css/styles.css';
 
-const Body = () => {
+const Cadastro = () => {
 return (
 <body class="bg1">
 
