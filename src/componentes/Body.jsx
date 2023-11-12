@@ -31,7 +31,6 @@ return (
 
   </div>
 
-  {/* Segurança */}
   <div id="Seguranca" className="seguranca">
     <div className="box7"></div>
     <div className="text7">
@@ -44,7 +43,6 @@ return (
     </div>
   </div>
 
-  {/* Confiança */}
   <div id="Confianca" className="confianca">
     <div className="box8"></div>
     <div className="box9">

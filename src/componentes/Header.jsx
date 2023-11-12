@@ -7,7 +7,6 @@ return (
 
 <body className="bg1">
 
-    {/* Navegação */}
     <nav className="navbar navbar-expand-md navbar-dark p-4 header border-bottom border-light" id="Navbar">
         <div className="container-fluid">
             <a className="navbar-brand font-bold" href="#Menu">

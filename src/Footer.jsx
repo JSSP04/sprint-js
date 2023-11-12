@@ -1,6 +1,6 @@
 import {} from 'react';
-import '../assets/scss/styles.scss';
-import '../assets/css/styles.css';
+import './assets/scss/styles.scss';
+import './assets/css/styles.css';
 
 const Footer = () => {
   return (

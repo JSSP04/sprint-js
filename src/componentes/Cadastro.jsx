@@ -6,7 +6,6 @@ const Cadastro = () => {
 return (
 <body className="bg1">
 
-{/* cadastro */}
 <div id="Cadastro" className="cadastro">HTML
     <div className="bgt">
         
@@ -16,14 +15,12 @@ return (
     <div className="box2"></div>
     <div className="button1">
 
-        {/* Button trigger modal */}
         <div className="d-grid gap-2 col-6 mx-auto p-5">
             <button type="button" className="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Cadastre-se
             </button>
         </div>
 
-        {/* Modal */}
         <div className="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-lg">
                 <div className="modal-content">
