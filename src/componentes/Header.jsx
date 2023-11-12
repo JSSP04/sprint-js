@@ -1,6 +1,7 @@
 import {} from 'react';
 import '../assets/scss/styles.scss';
 import '../assets/css/styles.css';
+import img1 from '../assets/img/logo-SF-branco.png';
 
 function Header () {
 return (
@@ -10,7 +11,7 @@ return (
     <nav className="navbar navbar-expand-md navbar-dark p-4 header border-bottom border-light" id="Navbar">
         <div className="container-fluid">
             <a className="navbar-brand font-bold" href="#Menu">
-                <img src="./assets/img/logo-SF-branco.png" alt="Logo" width="20" height="30" className="d-inline-block align-text-top"/>
+                <img src={img1} alt="Logo" width="20" height="30" className="d-inline-block align-text-top"/>
                 Safe Flood
             </a>
 
