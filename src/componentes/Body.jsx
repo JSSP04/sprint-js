@@ -6,13 +6,11 @@ const Body = () => {
 return (
 <body className="bg1">
 
-  {/* Menu */}
   <div className="menu" id="Menu">
     <div className="box1"></div>
     <div className="text1"><h1>Safe Flood</h1></div>
   </div>
 
-  {/* Desafios */}
   <div id="Desafios" className="desafios">
     <div className="box3"></div>
     <div className="box4"></div>
